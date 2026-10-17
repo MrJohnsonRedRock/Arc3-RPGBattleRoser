@@ -2,8 +2,14 @@ import java.util.Scanner;
 
 public class Main {
     private static Scanner input = new Scanner(System.in);
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException {
         Scanner input = new Scanner(System.in);
+        SimpleAudioPlayer narrator = new SimpleAudioPlayer();
+        narrator.setPreviewMode(false);   // delete this line for the final version
+
+
+
+
 
         print("Welcome, traveler.  You must choose your combatants before you enter the");
         print("");
@@ -15,6 +21,8 @@ public class Main {
         print("                     | |");
         print("                     / /");
         print("                    '-'");
+        narrator.play("EnterTheDungeon.wav");
+
 
         print("You may only choose three");
         for (int i = 0; i < 4; i++) {
